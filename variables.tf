@@ -37,14 +37,17 @@ variable "api_key" {
   description = "(Required) API key for web app to talk to SaaS platform."
 }
 
-variable "public_subnets" {
-  type        = list(string)
-  description = "(Required) List of subnet IDs for EC2 instance deployments."
-}
-
-variable "vpc_id" {
+variable "playbook_repository" {
   type        = string
-  description = "(Required) VPC ID of VPC for application deployment."
+  description = "(Required) uri of git playbook to be executed by ansible"
 }
 
+variable "tfe_organization" {
+  type        = string
+  description = "TFE org to pull external configs"
+}
 
+variable "tfe_workspace_name" {
+  type        = string
+  description = "TFE workspace to pull external configs"
+}
