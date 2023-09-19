@@ -46,3 +46,8 @@ variable "tfe_workspace_name" {
   type        = string
   description = "TFE workspace to pull external configs"
 }
+
+variable "playbook_repository" {
+  type        = string
+  description = "(Required) ansible git repo to run"
+}
