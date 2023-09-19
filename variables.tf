@@ -37,6 +37,11 @@ variable "api_key" {
   description = "(Required) API key for web app to talk to SaaS platform."
 }
 
+variable "playbook_repository" {
+  type        = string
+  description = "(Required) uri of git playbook to be executed by ansible"
+}
+
 variable "public_subnets" {
   type        = list(string)
   description = "(Required) List of subnet IDs for EC2 instance deployments."
